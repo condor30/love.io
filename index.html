@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Mise à jour ici -->
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="tit">💖 Love Calculator 💖</h1>
+        <label for="nom1">Entrez votre nom :</label>
+        <input type="text" id="nom1" placeholder="Votre nom" required>
+
+        <label for="nom2">Entrez le nom de votre partenaire :</label>
+        <input type="text" id="nom2" placeholder="Nom de votre partenaire" required>
+
+        <button id="calculateBtn">Calculer</button>
+        <button id="clearBtn">Effacer</button>
+        <button id="shareBtn">Partager</button>
+
+        <div id="result" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
