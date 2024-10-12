@@ -69,7 +69,7 @@ function shareResult() {
             const file = new File([blob], 'resultat_amour.png', { type: 'image/png' });
             navigator.share({
                     title: 'Résultat du Love Calculator',
-                    text: 'Voici ma compatibilité amoureuse !',
+                    text: 'Voici ma compatibilité amoureuse ! https://condor30.github.io/love.io/',
                     files: [file],
                 }).then(() => console.log('Partage réussi'))
                 .catch((error) => console.error('Erreur de partage', error));
