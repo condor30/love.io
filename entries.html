@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualiser les Entrées</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Entrées du Love Calculator</h1>
+    <pre id="entries"></pre>
+
+    <script>
+        // Fonction pour récupérer les entrées du fichier
+        function fetchEntries() {
+            fetch('http://localhost:3000/entries')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erreur lors de la récupération des entrées');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('entries').textContent = data; // Afficher le contenu
+                })
+                .catch(error => console.error('Erreur :', error));
+        }
+
+        // Appeler la fonction pour récupérer les entrées
+        fetchEntries();
+    </script>
+</body>
+
+</html>
